@@ -13,7 +13,7 @@ img{
 }
 
 .hero{
-    background-image:image-set(url('images/pattern-bg-mobile.png') 1x, url('images/pattern-bg-desktop.png') 2x ) ;
+    background-image:url('images/pattern-bg-mobile.png') ;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -30,6 +30,7 @@ img{
     text-align: center;
     margin-bottom: 2em;
     color: #fff;
+    font-size:  2rem;
 }
 #searchBar{
     background-color: #fff;
@@ -120,10 +121,11 @@ img{
     height: 380px;
 }
  .mini-container{
-    width: 80%;
+    width: 90%;
     background-color: #fff;
     border-radius: 15px;
     padding: .5em 0;
+    max-width: 1200px;
 
 
  }

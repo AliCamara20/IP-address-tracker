@@ -3,10 +3,11 @@ const inputField = document.querySelector(".input-field");
 const submitBtn = document.querySelector(".submitBtn")
 const ipInfoContainer = document.querySelector(".ip-info");
 const apiKey = 'at_p6bFgeiqJI8sm8ruVZqZghv7szbJh'
-async function getLocation(ipAdress = ''){
+async function getLocation(){
     try{
 
-        const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAdress}`)
+        const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}`)
+        console.log(response);
         const data = await response.json();
         console.log(data);
         let ipInfo = document.createElement("li");
