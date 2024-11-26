@@ -1,0 +1,153 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+img{
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+.hero{
+    background-image:image-set(url('images/pattern-bg-mobile.png') 1x, url('images/pattern-bg-desktop.png') 2x ) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+.title{
+    text-align: center;
+    margin-bottom: 2em;
+    color: #fff;
+}
+#searchBar{
+    background-color: #fff;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0  auto;
+    position: relative;
+    border-radius: 10px;
+    height: 50px;
+    margin-bottom:3em !important;
+    
+
+}
+
+.input-field{
+    flex-grow: 1;
+    border: none;
+    height: 100%;
+    width: 90%;
+    padding:  0 1em;
+    font-size: clamp(1rem, .0875rem + 1vw, 1.3rem);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    outline: none;
+
+}
+
+.submitBtn{
+    background-color: #222;
+    border: none;
+    height: 100%;
+    width: 15%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.submitBtn svg{
+    width: 100%;
+    height: 100%;
+}
+
+.ip-info-container{
+    margin-top: 30;
+    border-radius: 10px;
+    width: 70%;
+    margin: 0 auto;
+    position: relative;
+    padding: 1em 0;
+    top: 160px;
+    z-index: 2000;
+
+    
+    
+}
+.ip-info{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.info{
+    text-align: center;
+}
+
+.info-title{
+    text-transform: uppercase;
+    font-size: clamp(.7rem, .875rem + 1vw, 1rem);
+    opacity: .7;
+    margin-bottom: 0;
+
+}
+
+.info-detail{
+    font-size: clamp(1rem, .875rem + 1vw, 1.5rem);
+    margin-top: 0;
+}
+
+
+#map{
+    height: 380px;
+}
+ .mini-container{
+    width: 80%;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: .5em 0;
+
+
+ }
+@media (min-width: 1200px){
+    .row{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .ip-info{
+        text-align: left;
+    }
+
+    .ip-info-container{
+        top: 60px;
+    }    
+}
+
+
+
+
+
+
+
+
