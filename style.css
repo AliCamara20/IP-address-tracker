@@ -30,11 +30,11 @@ img{
     text-align: center;
     margin-bottom: 2em;
     color: #fff;
-    font-size:  2rem;
+    font-size: clamp(1.5rem, .875rem + 1vw, 2rem ) ;
 }
 #searchBar{
     background-color: #fff;
-    width: 70%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -82,7 +82,7 @@ img{
 .ip-info-container{
     margin-top: 30;
     border-radius: 10px;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     position: relative;
     padding: 1em 0;
@@ -100,7 +100,15 @@ img{
 }
 
 .info{
+    border-right: 1px solid #ccc ;
+    padding: 0 2em;
+    width: 100%;
     text-align: center;
+
+}
+
+.info:last-child{
+    border-right: 0;
 }
 
 .info-title{
@@ -143,7 +151,11 @@ img{
 
     .ip-info-container{
         top: 60px;
-    }    
+    }  
+    
+    #searchBar{
+        width: 50%;
+    }
 }
 
 

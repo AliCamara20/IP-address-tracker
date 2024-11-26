@@ -3,13 +3,36 @@ const inputField = document.querySelector(".input-field");
 const submitBtn = document.querySelector(".submitBtn")
 const ipInfoContainer = document.querySelector(".ip-info");
 const apiKey = 'at_p6bFgeiqJI8sm8ruVZqZghv7szbJh'
-async function getLocation(){
+async function getLocation(ipAddress = ''){
     try{
 
-        const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}`)
+        const response = await fetch(`https://geo.ipify.org/api/v2/country,city?apiKey=${apiKey}&ipAddress=${ipAddress}`)
         console.log(response);
         const data = await response.json();
         console.log(data);
+
+        ipInfoContainer.innerHTML = `
+          <li class = "info">
+            <p class = "info-title">ip address</p>
+            <h2 class = "info-detail">${data.ip}</h2>
+          </li>
+
+          <li class = "info">
+            <p class = "info-title">location</p>
+            <h2 class = "info-detail">${data.location.region}</h2>
+          </li>
+
+          <li class = "info">
+            <p class = "info-title">time zone</p>
+            <h2 class = "info-detail">${data.location.timezone}</h2>
+          </li>
+
+          <li class = "info">
+            <p class = "info-title">isp</p>
+            <h2 class = "info-detail">${data.isp || 'Unknown'}</h2>
+          </li>
+        `
+        /*
         let ipInfo = document.createElement("li");
         ipInfo.classList.add("info");
         
@@ -67,6 +90,7 @@ async function getLocation(){
         ipInfo4.appendChild(ipInfoTitle4);
         ipInfo4.appendChild(ipInfoDetail4);
         ipInfoContainer.appendChild(ipInfo4);
+        */
         
         
 
